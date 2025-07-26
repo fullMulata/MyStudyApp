@@ -1,0 +1,9 @@
+CALENDARIO: 
+- poterlo sincronizzare con Google se login
+
+TODO:
+- se login, si può mettere una data di scadenza
+
+- musica
+- pomodoro
+- calcolatore di pagine/capitoli
