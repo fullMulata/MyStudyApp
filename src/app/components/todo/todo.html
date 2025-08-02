@@ -1,0 +1,16 @@
+<div #todo class="todo-container" appDraggable>
+    <form [formGroup]="formGroup" class="add-task">
+        <input type="text" formControlName="newTask" placeholder="Enter new task">
+        <button type="button" (click)="addTask()"><i class="fa-solid fa-plus"></i></button>
+    </form>
+    <ul class="task-list">
+        <li *ngFor="let todoItem of todoList" [class.completed]="todoItem.completed">
+            <input type="checkbox" 
+            [(checked)]="todoItem.completed"
+            (change)="completeTask(todoItem.id)"
+            >
+            <span >{{todoItem.task}}</span>
+            <button class="delete-btn" type="button" (click)="deleteTask(todoItem.id)"><i class="fa-solid fa-trash"></i></button>
+        </li>
+    </ul>
+</div>

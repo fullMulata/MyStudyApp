@@ -1,0 +1,18 @@
+<div #tomato class="tomato-container" appDraggable [ngClass]="selectedMode">
+    
+    <div class="button-container">
+        <button class="tab" [class.active]="selectedMode === 'tomato-session'" (click)="setMode('tomato-session')">Focus</button>
+        <button class="tab" [class.active]="selectedMode === 'short-break'" (click)="setMode('short-break')">Short Break</button>
+        <button class="tab" [class.active]="selectedMode === 'long-break'" (click)="setMode('long-break')">Long Break</button>
+    </div>
+    
+    <div class="time" id="time">25:00</div>
+    
+    
+    <div class="buttons">
+        <button id="start-btn" (click)="startTimer()">START</button>
+        <button id="stop-btn" (click)="stopTimer()">STOP</button>
+        <button id="reset-btn" (click)="resetTimer()">RESET</button>
+    </div>
+    
+</div>

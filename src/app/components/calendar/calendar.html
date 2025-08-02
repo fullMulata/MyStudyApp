@@ -1,0 +1,24 @@
+<div #calendar class="calendar-container" appDraggable>
+    <div class="calendar-header">
+      <button (click)="onPreviousMonth()" class="nav-btn">
+        <i class="fa-solid fa-left-long"></i>
+      </button>
+      <span class="month-label">{{ calendarCreator.getMonthName(monthNumber) }} {{ year }}</span>
+      <button (click)="onNextMonth()" class="nav-btn">
+        <i class="fa-solid fa-right-long"></i>
+      </button>
+    </div>
+  
+    <div class="calendar-weeks">
+      <span *ngFor="let weekDay of weekDaysName" class="day week-day">
+        {{ weekDay }}
+      </span>
+      <ng-container *ngFor="let day of monthDays">
+        <span class="day date-day" [class.empty]="day.dayNumber === undefined">
+          {{ day.dayNumber !== 0 ? day.dayNumber : '' }}
+        </span>
+      </ng-container>
+    </div>
+    
+  </div>
+  

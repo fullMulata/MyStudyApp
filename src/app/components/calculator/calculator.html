@@ -1,0 +1,35 @@
+<div #calculator class="container calculator mt-5" appDraggable>
+    <div id="display">{{expression}}</div>
+    <div class="row keys">
+      <button (click)="appendInput('/100')">%</button>
+      <button (click)="appendInput('^2')">x<sup>2</sup></button>
+      <button (click)="canc()">C</button>
+      <button (click)="back()"><i class="fa-solid fa-delete-left"></i></button>
+      
+      <button (click)="appendInput('(')">(</button>
+      <button (click)="appendInput(')')">)</button>
+      <button (click)="appendInput('sqrt(')"><i class="fas fa-square-root-alt"></i></button>
+      <button (click)="appendInput('/')"><i class="fa-solid fa-divide"></i></button>
+      
+      <button (click)="appendInput('7')">7</button>
+      <button (click)="appendInput('8')">8</button>
+      <button (click)="appendInput('9')">9</button>
+      <button (click)="appendInput('*')">x</button>
+      
+      <button (click)="appendInput('4')">4</button>
+      <button (click)="appendInput('5')">5</button>
+      <button (click)="appendInput('6')">6</button>
+      <button (click)="appendInput('-')">-</button>
+      
+      <button (click)="appendInput('1')">1</button>
+      <button (click)="appendInput('2')">2</button>
+      <button (click)="appendInput('3')">3</button>
+      <button (click)="appendInput('+')">+</button>
+      
+      <button (click)="appendInput('+/-')">+/-</button>
+      <button (click)="appendInput('0')">0</button>
+      <button (click)="appendInput('.')">,</button>
+      <button (click)="calculate()">=</button>
+    </div>
+  </div>
+  
